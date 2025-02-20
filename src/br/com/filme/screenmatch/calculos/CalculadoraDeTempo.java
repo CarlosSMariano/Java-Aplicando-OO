@@ -1,7 +1,5 @@
-package br.com.filme.screenmat.calculos;
+package br.com.filme.screenmatch.calculos;
 
-import br.com.filme.screenmatch.modelos.Filme;
-import br.com.filme.screenmatch.modelos.Serie;
 import br.com.filme.screenmatch.modelos.Titulo;
 
 public class CalculadoraDeTempo {

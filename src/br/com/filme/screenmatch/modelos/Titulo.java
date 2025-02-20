@@ -1,6 +1,6 @@
 package br.com.filme.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     //    Atributos:
     private String nome;
     private int anoDeLancamento;
@@ -8,6 +8,14 @@ public class Titulo {
     private int duracaoEmMinutos;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
+
+//    Construtor
+
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
 
 //    Getters and Setters
 
@@ -48,7 +56,7 @@ public class Titulo {
     }
 
 
-    //    Método:
+    //    Métodos:
 
 
     public void exibeFichaTecnica(){
@@ -68,4 +76,8 @@ public class Titulo {
     }
 
 
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
 }

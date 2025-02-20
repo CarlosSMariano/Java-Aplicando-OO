@@ -7,9 +7,19 @@ public class Serie extends Titulo{
     private boolean ativa;
     private int minutosPorEpisodio;
 
+//    Construtor
+    public Serie(String nome, int anoDeLancamento){
+        super(nome, anoDeLancamento);
+    }
 //    Métodos
 
-// Sobrescrevendo um método da classe pai
+
+    @Override
+    public String toString() {
+        return "Série: " + this.getNome()  + "(" + this.getAnoDeLancamento() + ")";
+    }
+
+    // Sobrescrevendo um métodos da classe pai
     @Override //A anotação @Override possibilita a sobrescrita de um método
     public int getDuracaoEmMinutos() {
         return temporadas * episodioPorTemporada * minutosPorEpisodio;

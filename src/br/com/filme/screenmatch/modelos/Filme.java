@@ -1,10 +1,15 @@
 package br.com.filme.screenmatch.modelos;
 
-import br.com.filme.screenmat.calculos.Classificavel;
+import br.com.filme.screenmatch.calculos.Classificavel;
 
 public class Filme extends Titulo implements Classificavel{
     //Atributos
     private  String diretor;
+
+    //Construtor
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
 
     //Metodos Getters and Setters
     public String getDiretor() {
@@ -20,5 +25,10 @@ public class Filme extends Titulo implements Classificavel{
     public int getClassificacao() {
 //        cast: converter pra outro tipo de dado:
         return (int) obterMedia() / 2 ;
+    }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
     }
 }

@@ -1,6 +1,6 @@
 package br.com.filme.screenmatch.modelos;
 
-import br.com.filme.screenmat.calculos.Classificavel;
+import br.com.filme.screenmatch.calculos.Classificavel;
 
 public class Episodio implements Classificavel {
 //    Atributos
